@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regex Matches</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            margin: 0;
+            padding: 20px;
+        }
+        h2, h3, p {
+            text-align: center;
+            color: whitesmoke;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }    
+        li {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        a {
+            display: block;
+            text-align: center;
+            color: #007bff; /* Blue link color */
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            text-decoration: underline; /* Underline on hover */
+        } 
+    </style>       
+</head>
+<body>
+    <h2>Regex Result Page</h2>
+    <p>Pattern: {{ pattern }}</p>
+    <p>Text: {{ text }}</p>
+    <h3>Matches:</h3>
+    <ul>
+    {% for match in matches %}
+        <li>{{ match }}</li>
+    {% endfor %}
+    </ul>
+    <a href="/">Go Back</a>
+</body>
+</html>

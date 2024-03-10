@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: wheat;
+            margin: 0;
+            padding: 20px;
+        }
+        h2, h3 {
+            text-align: center;
+            color: whitesmoke;
+        }
+        a {
+            display: block;
+            text-align: center;
+            color: #007bff; /* Blue link color */
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>   
+</head>
+<body>
+    <h2>Email Validation</h2>
+    <h3>{{ email }}</h3>
+    {% if error %}
+        <p style="color: red;text-align: center;">{{ error }}, since {{ email }} doesn't follow the valid email format.</p>
+        {% endif %}
+    {% if match %}
+        <p style="color: green;text-align: center;">{{ match }}, since {{ email }} follows the valid email format.</p>
+    {% endif %}
+    <a href="/">Go Back</a>
+</body>
+</html>
